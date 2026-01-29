@@ -1,10 +1,14 @@
-// User Input using html div 
+// Type conversion
 
 document.getElementById("mysubmit").onclick= function(){
 
 
- username = document.getElementById("mytext").value;
- console.log(username);
- document.getElementById("myh1").textContent=`Hello ${username}`
+ age = document.getElementById("mytext").value;
+ age=Number(age)
+ age+=1;
+console.log(age,typeof age);
 
 }
+
+
+
