@@ -3,16 +3,10 @@
 // window.alert(`this is an alert`)
 // window.alert(`this is an alert`)
 
-let heading="Hello World condition is true";
-let count=2;
-let sit=0;
-if(sit)
-document.getElementById("myh1").textContent=heading;
-else
-document.getElementById("myh1").textContent='Conidition is false';
+let fullName="Lakshaydeep";
+let age= 25;
+let student = false;
 
-document.getElementById("button1").onclick
-
-document.getElementById("myp").textContent=`setting paragraph now for ${heading}`;
-document.getElementById("para").textContent=`this is paragraph ${count}`;
-console.log(typeof heading)
+document.getElementById("p1").textContent= `Your name is ${fullName}`;
+document.getElementById("p2").textContent=`Your age is ${age}`;
+document.getElementById("p3").textContent=`are you a student?${student}`
