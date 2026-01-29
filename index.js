@@ -1,12 +1,10 @@
-// User Input using windows prompt
+// User Input using html div 
 
-let username;
-username =window.prompt("whats your username?");
-
-document.getElementById("p1").textContent=` the user name is ${username}`;
-
-let age= window.prompt("enter your age");
+document.getElementById("mysubmit").onclick= function(){
 
 
-age=age*45;
-document.getElementById("p2").textContent=`Boom your new age is ${age}`;
+ username = document.getElementById("mytext").value;
+ console.log(username);
+ document.getElementById("myh1").textContent=`Hello ${username}`
+
+}
