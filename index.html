@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level1</title>
-    <link rel="stylesheet" href="styles.css"> </link>
+  <title>Display Properties Demo</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="Box">
-<h1>Enter the Radius of a Circle</h1>
-<label>radius</label>
-<input id="radi"></input>
-<button id="sub">Enter</button>
-<p id="display"></p>
+
+<h2>1. Block</h2>
+<div class="block box">Block 1</div>
+<div class="block box">Block 2</div>
+
+<h2>2. Inline</h2>
+<span class="inline box">Inline 1</span>
+<span class="inline box">Inline 2</span>
+
+<h2>3. Inline-block</h2>
+<span class="inline-block box">IB 1</span>
+<span class="inline-block box">IB 2</span>
+<span class="inline-block box">IB 1</span>
+<span class="inline-block box">IB 2</span>
+<span class="inline-block box">IB 1</span>
+<span class="inline-block box">IB 2</span>
+<h2>4. Flex</h2>
+<div class="flex">
+  <div class="box">A</div>
+  <div class="box">B</div>
+  <div class="box">C</div>
 </div>
-   
-    <script src="index.js"></script>
+
+<h2>5. Grid</h2>
+<div class="grid">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+</div>
+
+<h2>6. None</h2>
+<div class="none box">You can't see me</div>
+
 </body>
 </html>
