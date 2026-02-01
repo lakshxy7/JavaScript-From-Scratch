@@ -1,13 +1,26 @@
-// Type conversion
-const PI = 3.14159;
-let radius;
-let circumference;
 
-document.getElementById("sub").onclick= function(){
-    radius=document.getElementById("radi").value;
+ let count=0
 
-    radius=Number(radius);
-    circumference=2 * PI * radius;
-    console.log(circumference);
-    document.getElementById("display").textContent=circumference + " "+"cm";
+const counter = document.getElementById("counter");
+const increasebt=document.getElementById("inc")
+const decreasebt=document.getElementById("dec")
+const reset=document.getElementById("reset")
+counter.textContent=count;
+
+increasebt.onclick=function(){
+  count = count + 1;
+ counter.textContent = count;  
+
+};
+
+decreasebt.onclick=function(){
+  count = count -1;
+ counter.textContent = count;  
+
+}
+
+reset.onclick=function(){
+ count=0;
+counter.textContent=count;
+
 }
