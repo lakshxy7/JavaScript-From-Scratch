@@ -1,14 +1,13 @@
 // Type conversion
+const PI = 3.14159;
+let radius;
+let circumference;
 
-document.getElementById("mysubmit").onclick= function(){
+document.getElementById("sub").onclick= function(){
+    radius=document.getElementById("radi").value;
 
-
- age = document.getElementById("mytext").value;
- age=Number(age)
- age+=1;
-console.log(age,typeof age);
-
+    radius=Number(radius);
+    circumference=2 * PI * radius;
+    console.log(circumference);
+    document.getElementById("display").textContent=circumference + " "+"cm";
 }
-
-
-
