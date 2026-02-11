@@ -12,23 +12,21 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .counter-heading{
     text-align: center;
 }
-.counter-display{
+.inputbox{
    
-   display: flex;
-   align-items: center;
-       justify-content: center;
-         width: 500px;
-}
-.inbox{
-align-items: center;
-    justify-content: center;
-      display: flex;
-      background-color: rgb(243, 189, 189);
-}
-.buttons{
     display: flex; 
     gap: 20px;
     align-items: center;
     justify-content: center;
+    
+}
+.inbox{
+    display: flex; 
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+
     
 }

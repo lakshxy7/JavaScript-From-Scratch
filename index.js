@@ -1,10 +1,19 @@
-let pressbutton = document.getElementById("button1");
+let username=window.prompt("enter username");
 
-pressbutton.onclick = function () {
-  let rn = Math.random();
-    let max=100;
-    let min=50;
 
-  let randomNumber = Math.ceil(rn * (max-min)+50);
-  document.getElementById("display").textContent = randomNumber;
-};
+
+if (username==`lakshay`)
+{
+    alert("welcome boss");
+}
+else if(username==`mohit`)
+{
+    alert("hello mohit");
+
+}
+else
+{
+ ( alert("who are you mf"));
+}
+
+    
