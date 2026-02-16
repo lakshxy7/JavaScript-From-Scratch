@@ -1,16 +1,57 @@
-//ternary operator = a shortcut to if and else statements
-//                  helps to assign a variable baed on a condition
-//              condition? codeIfTrue : codeIfFalse
+// let day="pizza";
 
 
-// let age= 7;
-// message=age>=18 ?"youre an adult":"welcome to the island"
-// window.alert(message)
+// switch(day){
+//     case 1:
+//         console.log("it is monday")
+//         break;
+//         case 2:
+//         console.log("it is tuesday")
+//         break;
+//         case 3:
+//         console.log("it is wednesday")
+//         break;
+//         case 4:
+//         console.log("it is thursday")
+//         break;
+//         case 5:
+//         console.log("it is friday")
+//         break;
+//         case 6:
+//         console.log("it is saturday")
+//         break;
+//         case 7:
+//         console.log("it is sunday")
+//         break;
+//         default:
+//             console.log(`${day} is not a day`)
 
-// let time=16;
-// let greeting= time<12?"morning":"evening";
-// window.alert(greeting)
 
-let isStudent =false;
-let message =isStudent ? "you are a student": "not student"
-window.alert(message)
+// }
+
+
+let testScore=79;
+let letterGrade;
+switch(true){
+
+
+    case testScore>=90:
+    letterGrade="A";
+    break;
+
+     case testScore>=80:
+    letterGrade="b";
+    break;
+
+     case testScore>=70:
+    letterGrade="c";
+    break;
+
+     case testScore>=50:
+    letterGrade="d";
+    break;
+    default:
+        letterGrade="Fail";
+
+}
+console.log(letterGrade);
