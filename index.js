@@ -1,43 +1,33 @@
 // ======================================
-// LOGICAL OPERATORS IN JAVASCRIPT
-// ======================================
-// Used to combine or manipulate boolean values (true / false)
-
-
-// 🔹 &&  → AND  
-// Returns true if BOTH conditions are true
-
-// 🔹 ||  → OR  
-// Returns true if AT LEAST ONE condition is true
-
-// 🔹 !   → NOT  
-// Reverses the boolean value
-
-
-
-// ======================================
-// EXAMPLE 1: Using OR (||)
+// COMPARISON OPERATORS IN JAVASCRIPT
 // ======================================
 
-const temp = 250;
+// =   → Assignment operator
+//       Assigns a value to a variable
 
-if (temp <= 0 || temp > 30) {
-  console.log("Weather is BAD");
-} else {
-  console.log("Weather is GOOD");
-}
+// ==  → Equality operator
+//       Compares values only (datatype ignored)
+
+// === → Strict equality operator
+//       Compares value AND datatype
+
+// !=  → Inequality operator
+//       Checks if values are NOT equal (datatype ignored)
+
+// !== → Strict inequality operator
+//       Checks if value OR datatype is different
 
 
 
 // ======================================
-// EXAMPLE 2: Using NOT (!)
+// EXAMPLE
 // ======================================
 
-const isSunny = false;
+const PI = 3.14;
 
-if (isSunny) {
-  console.log("It is Sunny");
+if (PI !== "3.14") {
+  console.log("This is NOT Pi");
 } 
-else if (!isSunny) {
-  console.log("It is not Sunny");
+else {
+  console.log("This is Pi");
 }
