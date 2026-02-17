@@ -1,45 +1,43 @@
 // ======================================
-// METHOD CHAINING
+// LOGICAL OPERATORS IN JAVASCRIPT
 // ======================================
-// Calling multiple methods in one continuous line
-// Each method works on the result of the previous one
+// Used to combine or manipulate boolean values (true / false)
 
 
-let userName = window.prompt("Enter your username");
+// 🔹 &&  → AND  
+// Returns true if BOTH conditions are true
 
+// 🔹 ||  → OR  
+// Returns true if AT LEAST ONE condition is true
 
-// ======================================
-// ❌ WITHOUT METHOD CHAINING
-// ======================================
-
-// Step 1: Remove extra spaces
-// userName = userName.trim();
-
-// Step 2: Get first letter
-// let firstLetter = userName.charAt(0);
-
-// Step 3: Capitalize first letter
-// firstLetter = firstLetter.toUpperCase();
-
-// Step 4: Get remaining letters
-// let remainingLetters = userName.slice(1);
-
-// Step 5: Convert remaining letters to lowercase
-// remainingLetters = remainingLetters.toLowerCase();
-
-// Step 6: Combine them
-// userName = firstLetter + remainingLetters;
-
-// console.log(userName);
+// 🔹 !   → NOT  
+// Reverses the boolean value
 
 
 
 // ======================================
-// ✅ USING METHOD CHAINING
+// EXAMPLE 1: Using OR (||)
 // ======================================
 
-userName =
-  userName.trim().charAt(0).toUpperCase() +
-  userName.trim().slice(1).toLowerCase();
+const temp = 250;
 
-console.log(userName);
+if (temp <= 0 || temp > 30) {
+  console.log("Weather is BAD");
+} else {
+  console.log("Weather is GOOD");
+}
+
+
+
+// ======================================
+// EXAMPLE 2: Using NOT (!)
+// ======================================
+
+const isSunny = false;
+
+if (isSunny) {
+  console.log("It is Sunny");
+} 
+else if (!isSunny) {
+  console.log("It is not Sunny");
+}
