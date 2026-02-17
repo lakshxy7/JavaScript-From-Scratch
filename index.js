@@ -1,69 +1,53 @@
-// =======================
-// STRING METHODS IN JS
-// =======================
+// ======================================
+// STRING SLICING (Creating Substrings 
+// from a portion of another screen)
+// ======================================
 
-let userName = "BroCode";
-
-
-// 🔹 1. charAt() → Finds character at a specific position
-// let z = userName.charAt(0);
-
-
-// 🔹 2. indexOf() → Finds FIRST occurrence of a character
-// let z = userName.indexOf("o");
+// slice(start, end)
+// → Extracts part of a string
+// → Does NOT modify original string
+// → End index is NOT included
 
 
-// 🔹 3. lastIndexOf() → Finds LAST occurrence of a character
-// let z = userName.lastIndexOf("o");
+// ======================================
+// EXAMPLE 1: Extract First and Last Name
+// ======================================
+
+const fullName = "123 456";
+
+// Step 1: Find position of space
+let spaceIndex = fullName.indexOf(" ");
+
+// Step 2: Extract first name (from start to space)
+let firstName = fullName.slice(0, spaceIndex);
+
+// Step 3: Extract last name (from space to end)
+let lastName = fullName.slice(spaceIndex + 1);
+
+// Output
+console.log(`First name is ${firstName}`);
+console.log(`Last name is ${lastName}`);
 
 
-// 🔹 4. length → Returns total number of characters
-// let z = userName.length;
 
+// ======================================
+// EXAMPLE 2: Extract Email Username & Domain
+// ======================================
 
-// 🔹 5. trim() → Removes extra spaces from start and end
-// let z = userName.trim();
+const email = "lakshaydeepm25@gmail.com";
 
+// Step 1: Find position of "@"
+let atIndex = email.indexOf("@");
 
-// 🔹 6. toUpperCase() → Converts string to uppercase
-// let z = userName.toUpperCase();
+// Step 2: Extract username (before "@")
+let userName = email.slice(0, atIndex);
 
+// Step 3: Find position of "."
+let dotIndex = email.indexOf(".");
 
-// 🔹 7. toLowerCase() → Converts string to lowercase
-// let z = userName.toLowerCase();
+// Step 4: Extract email provider (between "@" and ".")
+let provider = email.slice(atIndex + 1, dotIndex);
 
-
-// 🔹 8. repeat() → Repeats the string
-// let z = userName.repeat(2);
-
-
-// 🔹 9. startsWith() → Checks if string starts with given character
-// let z = userName.startsWith("B");
-
-
-// 🔹 10. endsWith() → Checks if string ends with given character
-// let z = userName.endsWith("e");
-
-
-// 🔹 11. includes() → Checks if string contains something
-// let z = userName.includes("1"); // Example → false
-
-
-// 🔹 12. replace() → Replaces FIRST occurrence
-// let z = userName.replace("o", "a");
-
-
-// 🔹 13. replaceAll() → Replaces ALL occurrences
-// let z = userName.replaceAll("o", "a");
-
-
-// 🔹 14. padStart() → Adds characters at beginning
-// let z = userName.padStart(11, "1");
-
-
-// 🔹 15. padEnd() → Adds characters at end
-let z = userName.padEnd(11, "1");
-
-
-// =======================
-console.log(z);
+// Output
+console.log(`Username is ${userName}`);
+console.log(`Provider is ${provider}`);
