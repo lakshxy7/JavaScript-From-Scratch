@@ -1,66 +1,71 @@
 // ======================================
-// WHILE LOOP
+// FOR LOOP
 // ======================================
-// A while loop repeats code as long as the condition is TRUE.
+// A for loop repeats code a LIMITED number of times.
+// It has 3 parts:
+// 1. Initialization
+// 2. Condition
+// 3. Increment / Decrement
 
 
 
 // ======================================
-// EXAMPLE 1: Keep Asking Until User Enters a Name
+// EXAMPLE 1: Count from 0 to 2
 // ======================================
 
-/*
-This loop keeps running if:
-- The user enters an empty string ""
-- OR clicks Cancel (which returns null)
-*/
-
-let username = "";
-
-while (username === "" || username === null) {
-  username = window.prompt("Enter your name:");
+for (let i = 0; i <= 2; i++) {
+  console.log(i);
 }
 
-console.log(`Hello ${username}`);
+
+
+// ======================================
+// EXAMPLE 2: Count from 0 to 10 (Step of 2)
+// ======================================
+// j += 2 increases j by 2 each time
+
+for (let j = 0; j <= 10; j += 2) {
+  console.log(j);
+}
 
 
 
 // ======================================
-// EXAMPLE 2: do...while Loop
+// EXAMPLE 3: Count Backwards (10 to 2)
 // ======================================
-// A do...while loop runs the code ONCE first,
-// then checks the condition after.
 
-let user = "";
-
-do {
-  user = window.prompt("Enter your name:");
-} while (user === "" || user === null);
-
-console.log(`Hello ${user}`);
+for (let i = 10; i >= 2; i--) {
+  console.log(i);
+}
 
 
 
 // ======================================
-// EXAMPLE 3: Simple Login System
+// EXAMPLE 4: Skip a Value using continue
 // ======================================
-// The loop continues until loggedIN becomes true.
+// continue → skips the current iteration
 
-let loggedIN = false;
-let loginUser;
-let password;
+for (let i = 0; i <= 20; i++) {
 
-while (!loggedIN) {
-
-  loginUser = window.prompt("Enter your username:");
-  password = window.prompt("Enter your password:");
-
-  // Condition for successful login
-  if (loginUser === "" && password === "") {
-    loggedIN = true;
-    console.log("You are logged in ✅");
-  } 
-  else {
-    console.log("Invalid credentials ❌");
+  if (i === 13) {
+    continue;   // Skip number 13
   }
+
+  console.log(i);
+}
+
+
+
+// ======================================
+// EXAMPLE 5: Stop Loop Early using break
+// ======================================
+// break → completely stops the loop
+
+for (let i = 0; i <= 20; i++) {
+
+  if (i === 13) {
+    break;   // Stop when i becomes 13
+  }
+
+  console.log(i);
 }
