@@ -1,55 +1,27 @@
-// Functions in JavaScript
-// A function lets you write code once and use it whenever you need.
-// To run the code inside a function, you must call (invoke) the function.
+// Variable Scope = where a variable is recognized and accessible
+// There are two main types: local scope and global scope.
 
-// function xyz(argument1, argument2)
-// The values we pass into a function when calling it are called arguments.
-// The variables written inside the function definition are called parameters.
+// Variables defined inside a function are called local variables.
+// They are accessible ONLY inside that function.
 
+// Variables defined outside a function are called global variables.
+// They can be accessed inside any function.
 
-// When we call the function, we send values to it.
-// These values ("Brocode" and 25) are arguments.
+// If we have two variables with the same name,
+// the local variable is given priority over the global one
+// (this is called shadowing).
 
+function function1(){
 
-// The order of parameters matters.
-// The first value goes to username.
-// The second value goes to age.
-// If you change the order, the output will change.
-
-
-
-function add(x,y){
-
-// x and y are parameters
-// This function returns x raised to the power of y
-// ** means exponent (power)
-
-return x**y;
+  let x = 1;  // Local variable (only inside function1)
+  console.log(x);
 }
 
-// 4 and 6 are arguments
-// So this becomes 4 raised to the power 6 (4^6)
-let answer = add(4,6);
+function function2(){
 
-console.log(answer); // prints 4096
-
-
-
-function isValidEmail(email){
-
-  // The includes() method checks if a string contains a specific value
-  // Here we are checking if the email contains "@" and "."
-  
-  if (email.includes("@","."))
-  {
-    return true;   // If condition is true, function returns true
-  }
-  else
-  {
-    return false;  // Otherwise it returns false
-  }
-
+  let x = 5;  // Local variable (only inside function2)
+  console.log(x);
 }
 
-// This will check if the string contains "@" and "."
-console.log(isValidEmail("laks.@"));
+function1();  // prints 1
+function2();  // prints 5
