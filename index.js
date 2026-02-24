@@ -1,59 +1,27 @@
-const minNum = 1;
-const maxNum = 50;
-let attempt = 0;
-const display=document.getElementById("display");
-let submitGuess= document.getElementById("mySubmit");
-let randomNum= Math.floor(Math.random()*(maxNum-minNum+1));
-console.log(randomNum);
+// Functions in JavaScript
+// A function lets you write code once and use it whenever you need.
+// To run the code inside a function, you must call (invoke) the function.
 
+// function xyz(argument1, argument2)
+// The values we pass into a function when calling it are called arguments.
+// The variables written inside the function definition are called parameters.
 
-
-
-
-submitGuess.onclick=function(){
-
-let guess=Number(document.getElementById("myText").value);
-console.log(typeof guess, guess);
-if (isNaN(guess)) {
-alert("enter a valid number");
-}
-else{
-
-
-
- 
-if(guess==randomNum){
-attempt++;
-display.textContent=`hurray you won in ${attempt} attempts`;
-guess==0;
- }
-
-  else  if(guess<minNum|| guess>maxNum){
-attempt++;
-
-display.textContent=`invalid enter a valid number`;
-
- }
-else  if(guess>=randomNum){
-attempt++;
-display.textContent=`it is greater then actual num`;
-
- }
-else  if(guess<=randomNum){
-attempt++;
-display.textContent=`it is smaller then actual num`;
-
- }
-
-
-
-
-
+function happyBirthday(username, age){
+console.log(`Happ Birthday1 ${username}`);
+console.log(`Happ Birthday0`);
+console.log(`Happ Birthday2`);
+console.log(`Happ Birthday3`);
+console.log(`Happ Birthday4`);
+console.log(`you are ${age} years old`);
 }
 
+// When we call the function, we send values to it.
+// These values ("Brocode" and 25) are arguments.
+happyBirthday("Brocode", 25);
 
+// The order of parameters matters.
+// The first value goes to username.
+// The second value goes to age.
+// If you change the order, the output will change.
 
-
-
-
-}
+happyBirthday("SB", 100);
