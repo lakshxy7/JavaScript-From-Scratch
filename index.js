@@ -1,71 +1,59 @@
-// ======================================
-// FOR LOOP
-// ======================================
-// A for loop repeats code a LIMITED number of times.
-// It has 3 parts:
-// 1. Initialization
-// 2. Condition
-// 3. Increment / Decrement
+const minNum = 1;
+const maxNum = 50;
+let attempt = 0;
+const display=document.getElementById("display");
+let submitGuess= document.getElementById("mySubmit");
+let randomNum= Math.floor(Math.random()*(maxNum-minNum+1));
+console.log(randomNum);
 
 
 
-// ======================================
-// EXAMPLE 1: Count from 0 to 2
-// ======================================
 
-for (let i = 0; i <= 2; i++) {
-  console.log(i);
+
+submitGuess.onclick=function(){
+
+let guess=Number(document.getElementById("myText").value);
+console.log(typeof guess, guess);
+if (isNaN(guess)) {
+alert("enter a valid number");
+}
+else{
+
+
+
+ 
+if(guess==randomNum){
+attempt++;
+display.textContent=`hurray you won in ${attempt} attempts`;
+guess==0;
+ }
+
+  else  if(guess<minNum|| guess>maxNum){
+attempt++;
+
+display.textContent=`invalid enter a valid number`;
+
+ }
+else  if(guess>=randomNum){
+attempt++;
+display.textContent=`it is greater then actual num`;
+
+ }
+else  if(guess<=randomNum){
+attempt++;
+display.textContent=`it is smaller then actual num`;
+
+ }
+
+
+
+
+
 }
 
 
 
-// ======================================
-// EXAMPLE 2: Count from 0 to 10 (Step of 2)
-// ======================================
-// j += 2 increases j by 2 each time
-
-for (let j = 0; j <= 10; j += 2) {
-  console.log(j);
-}
 
 
 
-// ======================================
-// EXAMPLE 3: Count Backwards (10 to 2)
-// ======================================
-
-for (let i = 10; i >= 2; i--) {
-  console.log(i);
-}
-
-
-
-// ======================================
-// EXAMPLE 4: Skip a Value using continue
-// ======================================
-// continue → skips the current iteration
-
-for (let i = 0; i <= 20; i++) {
-
-  if (i === 13) {
-    continue;   // Skip number 13
-  }
-
-  console.log(i);
-}
-
-
-
-// ======================================
-// EXAMPLE 5: Stop Loop Early using break
-// ======================================
-// break → completely stops the loop
-
-for (let i = 0; i <= 20; i++) {
-
-  if (i === 13) {
-    break;   // Stop when i becomes 13
-  }
-
-  console.log(i);
 }
