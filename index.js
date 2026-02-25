@@ -1,111 +1,64 @@
-// ======================================================
-// SPREAD OPERATOR (...) IN JAVASCRIPT
-// ======================================================
+// rest parameters = (...rest) allow a function to
+//  work with a variable
+// number of arguments by bundling them into an array
 //
-// The spread operator (...) allows an iterable
-// (like an array or string) to be expanded into
-// individual elements.
-//
-// It "unpacks" the values.
+// spread = expands an array (or string) into separate elements
+// rest   = bundles separate elements into an array
 
-// ======================================================
-// 1️⃣ SPREAD WITH ARRAYS
-// ======================================================
+// function openFridge(...foods){
 
-let numbers = [1, 2, 3, 4, 5];
+//   console.log(foods);
+// }
+// const food1="Pizza";
+// const food2="burger";
+// const food3="Sushi";
+// const food4="Hotdog";
+// const food5="Bread";
 
-// Math.max() expects separate numbers like:
-// Math.max(1, 2, 3, 4, 5)
-//
-// If we pass the array directly:
-// Math.max(numbers)
-// It gives NaN (Not a Number)
-//
-// Why?
-// Because Math.max does NOT accept an array.
-// It expects individual numeric arguments.
-// Passing an array makes it invalid.
-//
-// Spread fixes this by unpacking the array:
-
-let maximum = Math.max(...numbers);
-let minimum = Math.min(...numbers);
-
-console.log(maximum); // 5
-console.log(minimum); // 1
+// openFridge(food1,food2,food3,food4,food5);
 
 
-// ======================================================
-// 2️⃣ SPREAD WITH STRINGS
-// ======================================================
-//
-// A string is also iterable.
-// Spread breaks it into individual characters.
-
-let username = "Lakshay Deep";
-
-let letters = [...username];
-
-console.log(letters);
-// ["L", "a", "k", "s", "h", "a", "y", " ", "D", "e", "e", "p"]
 
 
-// ======================================================
-// 3️⃣ JOINING AFTER SPREAD
-// ======================================================
-//
-// join() converts array back into string
-// and inserts a symbol between elements
+function getFood(...foods){
 
-let letters2 = [...username].join("*");
-
-console.log(letters2);
-// L*a*k*s*h*a*y* *D*e*e*p
+ return foods;
+}
 
 
-// ======================================================
-// 4️⃣ COPYING ARRAYS (SHALLOW COPY)
-// ======================================================
-//
-// Spread can copy an array.
-// This creates a NEW array in memory.
 
-let fruits = ["apple", "banana", "orange"];
+const food1="Pizza";
+const food2="burger";
+const food3="Sushi";
+const food4="Hotdog"; 
+const food5="Bread";
 
-let newFruits = [...fruits];
-
-console.log(fruits);
-console.log(newFruits);
-
-// Important:
-// If we did:
-// let newFruits = fruits;
-// That would NOT copy.
-// Both variables would point to same array.
-
-
-// ======================================================
-// 5️⃣ MERGING ARRAYS
-// ======================================================
-//
-// Spread can combine multiple arrays.
-
-let vegetables = ["carrot", "potato", "celery"];
-
-let foods = [...fruits, ...vegetables, "eggs", "milk"];
+const foods=getFood(food1,food2,food3,food4,food5);
 
 console.log(foods);
-// ["apple", "banana", "orange", "carrot", "potato", "celery", "eggs", "milk"]
 
 
-// ======================================================
-// SUMMARY
-// ======================================================
-//
-// ...array → Unpacks elements
-// ...string → Splits into characters
-// Used for:
-// ✔ Finding max/min
-// ✔ Copying arrays
-// ✔ Merging arrays
-// ✔ Expanding elements inside function calls
+
+
+function sum(...numbers){
+
+    let result = 0;
+
+    for(let number of numbers){
+        result += number;
+    }
+
+    return result;
+}
+
+
+function getAverage(...numbers){
+
+    let result = 0;
+
+    for(let number of numbers){
+        result += number;
+    }
+
+    return result / numbers.length;
+}
