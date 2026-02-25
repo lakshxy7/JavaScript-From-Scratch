@@ -1,64 +1,42 @@
-// rest parameters = (...rest) allow a function to
-//  work with a variable
-// number of arguments by bundling them into an array
-//
-// spread = expands an array (or string) into separate elements
-// rest   = bundles separate elements into an array
-
-// function openFridge(...foods){
-
-//   console.log(foods);
-// }
-// const food1="Pizza";
-// const food2="burger";
-// const food3="Sushi";
-// const food4="Hotdog";
-// const food5="Bread";
-
-// openFridge(food1,food2,food3,food4,food5);
 
 
 
 
-function getFood(...foods){
+function rollDice(){
 
- return foods;
+const diceCount=document.getElementById("input-bar").value;
+const diceResult=document.getElementById("diceResult");
+const diceImages=document.getElementById("diceImages");
+const values=[];
+const images=[];
+
+if (isNaN(diceCount) || diceCount === "") 
+    {
+alert("enter a valid number");
+  }
+  else if(diceCount <= "0"){
+
+    alert("enter some number greater than 0");
+  }
+  else{
+for(let i=1;i<=diceCount;i++)
+{
+const value=Math.ceil(Math.random()*6);
+console.log(value) ;
+values.push(value);
+images.push(`<img src="assets/${value}.png">`)
 }
+diceResult.innerHTML=`<p>dice:  ${values.join(',')}</p>`;
+
+diceImages.innerHTML=`${images.join('')}`;
 
 
-
-const food1="Pizza";
-const food2="burger";
-const food3="Sushi";
-const food4="Hotdog"; 
-const food5="Bread";
-
-const foods=getFood(food1,food2,food3,food4,food5);
-
-console.log(foods);
+console.log(values) ;
 
 
 
 
-function sum(...numbers){
+   
+  }
 
-    let result = 0;
-
-    for(let number of numbers){
-        result += number;
-    }
-
-    return result;
-}
-
-
-function getAverage(...numbers){
-
-    let result = 0;
-
-    for(let number of numbers){
-        result += number;
-    }
-
-    return result / numbers.length;
 }
