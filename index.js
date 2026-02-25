@@ -1,27 +1,34 @@
-// Variable Scope = where a variable is recognized and accessible
-// There are two main types: local scope and global scope.
+const submitPressed = document.getElementById("submitTemp");
+const enteredTemp = document.getElementById("inputTemp");
+const display = document.getElementById("displayTemp");
+const toF = document.getElementById("toF");
+const toC = document.getElementById("toC");
 
-// Variables defined inside a function are called local variables.
-// They are accessible ONLY inside that function.
+submitPressed.onclick = function(){
 
-// Variables defined outside a function are called global variables.
-// They can be accessed inside any function.
+  let givenTemp = Number(enteredTemp.value);
 
-// If we have two variables with the same name,
-// the local variable is given priority over the global one
-// (this is called shadowing).
+  if (isNaN(givenTemp) || enteredTemp.value === "") {
+    alert("Enter a valid number");
+  }
+  else {
 
-function function1(){
+    if (toC.checked) {
+      let tempInC = (givenTemp - 32) * 5 / 9;
+      display.textContent = tempInC.toFixed(2) + " °C";
+    }
+    else if (toF.checked) {
+      let tempInF = (givenTemp * 9 / 5) + 32;
+      display.textContent = tempInF.toFixed(2) + " °F";
+    }
+    else {
+      display.textContent = "Please select a unit";
+    }
 
-  let x = 1;  // Local variable (only inside function1)
-  console.log(x);
+
+    toC.checked=false;
+    
+    toF.checked=false;
+  }
+
 }
-
-function function2(){
-
-  let x = 5;  // Local variable (only inside function2)
-  console.log(x);
-}
-
-function1();  // prints 1
-function2();  // prints 5

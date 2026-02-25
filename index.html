@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level1</title>
+    <title>Temperature Conversion</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game">
-        <input id="myText" type="text"></input>
-        <label id="display">Remarks</label>
-        <button type="submit" id="mySubmit">enter the number</button>
+    <div class="mainDiv">
+        <h1 id="heading1">Temperature Conversion</h1>
+        <input type="number" id="inputTemp" ></input>
+        <label id="displayTemp">Enter Temp</label>
+          
+        <div class="radiobuttons">
+        <input type="radio" id="toF" name="unit"></input>
+        <label  for="toF">Celcius To Fahrenheit</label><br>
+        <input type="radio" id="toC" name="unit"></input>
+        <label for="toC">Fahrenheit To Celcius</label>
+</div>
+
+        <button type="submit" id="submitTemp">Convert</button>
+    
     </div>
 
 <script src="index.js"></script>
