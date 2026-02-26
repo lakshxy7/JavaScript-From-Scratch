@@ -19,14 +19,20 @@ min-height: 60vh;
 box-sizing: border-box;
 box-shadow: 0px 0px 20px  rgb(158, 189, 162);
 }
+h1{font-size: vh;
+width: 50vh;
+text-align: center;
+margin-top: 20vh;
 
-#diceResult{
+}
+
+#password-result{
  
 text-align: center;
   height: 120px;        
   }
 
-#diceResult p{
+#password-result p{
  
 text-align: center;
   height: 120px;        
@@ -47,4 +53,10 @@ text-align: center;
   width: 40px;
   height: 40px;
   margin: 10px;
+}
+
+.radio-list{
+
+
+
 }

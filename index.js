@@ -1,42 +1,42 @@
+function generatePassword() {
 
+ const lowers = document.getElementById("LC").checked;
+ const uppers = document.getElementById("UC").checked;
+ const numbers = document.getElementById("NC").checked;
+ const symbols = document.getElementById("SC").checked;
 
+ const passLength = parseInt(document.getElementById("pass-length").value);
 
+ if (isNaN(passLength) || passLength <= 0) {
+   alert("Enter a valid number");
+   return;
+ }
 
-function rollDice(){
+ const output = document.getElementById("password-result");
 
-const diceCount=document.getElementById("input-bar").value;
-const diceResult=document.getElementById("diceResult");
-const diceImages=document.getElementById("diceImages");
-const values=[];
-const images=[];
+ const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+ const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+ const numberChars = "0123456789";
+ const symbolChars = "@#$%^&*()_+=-?><,/|\\:;{}[]";
 
-if (isNaN(diceCount) || diceCount === "") 
-    {
-alert("enter a valid number");
-  }
-  else if(diceCount <= "0"){
+ let allowedChars = "";
 
-    alert("enter some number greater than 0");
-  }
-  else{
-for(let i=1;i<=diceCount;i++)
-{
-const value=Math.ceil(Math.random()*6);
-console.log(value) ;
-values.push(value);
-images.push(`<img src="assets/${value}.png">`)
-}
-diceResult.innerHTML=`<p>dice:  ${values.join(',')}</p>`;
+ allowedChars += lowers ? lowercaseChars : "";
+ allowedChars += uppers ? uppercaseChars : "";
+ allowedChars += numbers ? numberChars : "";
+ allowedChars += symbols ? symbolChars : "";
 
-diceImages.innerHTML=`${images.join('')}`;
+ if (allowedChars.length === 0) {
+   alert("Select at least one character type");
+   return;
+ }
 
+ let password = "";
 
-console.log(values) ;
+ for (let i = 0; i < passLength; i++) {
+   const randomIndex = Math.floor(Math.random() * allowedChars.length);
+   password += allowedChars[randomIndex];
+ }
 
-
-
-
-   
-  }
-
+ output.textContent = password;
 }
