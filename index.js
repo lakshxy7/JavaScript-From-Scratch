@@ -1,42 +1,49 @@
-function generatePassword() {
+// callback = a function that is passed as an argument
+// to another function
 
- const lowers = document.getElementById("LC").checked;
- const uppers = document.getElementById("UC").checked;
- const numbers = document.getElementById("NC").checked;
- const symbols = document.getElementById("SC").checked;
+// used to handle asynchronous operations:
+// 1. Reading a file
+// 2. Network requests
+// 3. Interacting with databases
 
- const passLength = parseInt(document.getElementById("pass-length").value);
+// Think of it like:
+// "Hey, when you're done, run this function next."
 
- if (isNaN(passLength) || passLength <= 0) {
-   alert("Enter a valid number");
-   return;
- }
+// ---------------------------------------------
 
- const output = document.getElementById("password-result");
+// We are calling sum()
+// - displayPage is the callback function
+// - 1 and 2 are the numbers to add
 
- const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
- const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
- const numberChars = "0123456789";
- const symbolChars = "@#$%^&*()_+=-?><,/|\\:;{}[]";
+sum(displayPage, 1, 2);
 
- let allowedChars = "";
+function sum(callback, x, y){
 
- allowedChars += lowers ? lowercaseChars : "";
- allowedChars += uppers ? uppercaseChars : "";
- allowedChars += numbers ? numberChars : "";
- allowedChars += symbols ? symbolChars : "";
+    // Add the two numbers
+    let result = x + y;
 
- if (allowedChars.length === 0) {
-   alert("Select at least one character type");
-   return;
- }
+    // Once calculation is finished,
+    // call the callback function
+    // and send the result to it
+    callback(result);
+}
 
- let password = "";
+// ---------------------------------------------
 
- for (let i = 0; i < passLength; i++) {
-   const randomIndex = Math.floor(Math.random() * allowedChars.length);
-   password += allowedChars[randomIndex];
- }
+function displayConsole(result){
 
- output.textContent = password;
+    // This function receives the result
+    // and prints it in the console
+    console.log(result);
+}
+
+// ---------------------------------------------
+
+function displayPage(result){
+
+    // This function receives the result
+    // and displays it inside an HTML element
+    // with id "myH1"
+
+    document.getElementById("myH1").textContent = result;
 }
