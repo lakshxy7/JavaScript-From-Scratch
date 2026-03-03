@@ -3,30 +3,38 @@
 // array.forEach(callback)
 // element aregument are provided, 
 //element index and array are provided
-let numbers =[1,2,3,4,5];
+let fruits =["APPLE","orange","BANANA","coconut"];
 
-numbers.forEach(square);
-numbers.forEach(display);
+
+fruits.forEach(capitalize);
+
+
+fruits.forEach(display);
+
+function toUpperCase(element,index,array){
+    
+array[index]=element.toUpperCase();
+
+}
+
+
 
 function display(element){
+
+
     console.log(element);
 }
 
 
-
-function double(element,index,array){
-    array[index]=element*2;
+function toLowerCase(element,index,array){
+    
+array[index]=element.toLowerCase();
 
 }
 
-function triple(element,index,array){
-    array[index]=element*3;
+function capitalize(element,index,array){
+    
+array[index]=element.charAt(0).toLowerCase()+ element.slice(1);
+
 }
 
-function square(element,index,array){
-    array[index]=Math.pow(element,2)
-}
-
-function cube(element,index,array){
-    array[index]=Math.pow(element,3)
-}
