@@ -1,46 +1,15 @@
 // .filter() =creates a new array by filtering 
 // out elements
 
-let numbers=[1,2,3,4,5,6,7];
+let words=["apple","banana","orange",
+    "kiwi","pomegranate","coconut"];
 
-let evenNum=numbers.filter(isEven);
-console.log(evenNum);
+let elementsAboveSix= words.filter(aboveSix);
+console.log(elementsAboveSix);
 
-let oddNum=numbers.filter(isOdd);
-console.log(oddNum);
-
-
-function isEven(element){
-
-    return element%2===0;
-
-}
-
-function isOdd(element){
-    return element%2!==0;
-
-
-}
+function aboveSix(element){
 
 
 
-
-const ages=[16,17,18,20,60];
-
-let adult=ages.filter(isAbove);
-console.log(adult);
-
-
-let child=ages.filter(isLess);
-console.log(child);
-
-
-function isAbove(element){
- return element>=18;
-    
-}
-
-function isLess(element){
- return element<=18;
-    
+    return element.length>6;
 }
