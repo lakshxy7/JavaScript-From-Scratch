@@ -1,17 +1,46 @@
-// .map()=accepts a callback and applies that function
-//to each element of an array, then return a new array
+// .filter() =creates a new array by filtering 
+// out elements
 
-const dates=["2024-1-10","2025-2-20","2026-3-30"];
+let numbers=[1,2,3,4,5,6,7];
 
-const formattedDates=dates.map(formatDates);
+let evenNum=numbers.filter(isEven);
+console.log(evenNum);
+
+let oddNum=numbers.filter(isOdd);
+console.log(oddNum);
 
 
+function isEven(element){
 
-function formatDates(element){
+    return element%2===0;
 
-
-const parts=element.split("-");
-return`${parts[2]}/${parts[1]}/${parts[0]}` ;
 }
 
-console.log(formattedDates)
+function isOdd(element){
+    return element%2!==0;
+
+
+}
+
+
+
+
+const ages=[16,17,18,20,60];
+
+let adult=ages.filter(isAbove);
+console.log(adult);
+
+
+let child=ages.filter(isLess);
+console.log(child);
+
+
+function isAbove(element){
+ return element>=18;
+    
+}
+
+function isLess(element){
+ return element<=18;
+    
+}
