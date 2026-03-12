@@ -1,15 +1,35 @@
-// .filter() =creates a new array by filtering 
-// out elements
+// reduce() in JavaScript
 
-let words=["apple","banana","orange",
-    "kiwi","pomegranate","coconut"];
-
-let elementsAboveSix= words.filter(aboveSix);
-console.log(elementsAboveSix);
-
-function aboveSix(element){
+// reduce() is used to take all elements of 
+// an array and reduce them to a single value.
 
 
+// const prices= [5,30,10,25,15,20];
 
-    return element.length>6;
+
+// const total=prices.reduce(sum);
+// console.log(total);
+// function sum(accumalator, element){
+
+
+// return accumalator+element;
+// }
+
+const grades=[75,90,80,65,95];
+
+
+const maximum= grades.reduce(getMax);
+console.log(maximum);
+
+function getMax(accumalator,element){
+
+    return Math.max(accumalator, element);
+}
+
+const minimum= grades.reduce(getMin);
+console.log(minimum);
+
+function getMin(accumalator,element){
+
+    return Math.min(accumalator, element);
 }
