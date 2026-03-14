@@ -7,30 +7,34 @@
 // syntax
 // (parameters) => { code }
 
-// normal function
-const hello=function hello(){
-    console.log("hello");
-}
+const numbers=[1,2,3,4,5]
+// 3. map()
 
-hello(); // calling the function
+// Used to transform each element and return a new array.
 
-// arrow function
-const tello = (name) => console.log("tello",name);
+let Squares=numbers.map((element)=>{
 
-tello("lakshay"); // calling the function
-
+    return Math.pow(element,2);
+});
+console.log(Squares);
 
 
+let cubes=numbers.map((element)=>{
+
+    return Math.pow(element,3);
+});
+console.log(cubes);
+
+// 4. filter()
+
+// Used to keep elements that match a condition.
+let odds=numbers.filter((element)=>{
+
+    return Math.pow(element,3);
+});
+console.log(cubes);
 
 
-//zzzzzzzzzzzzzzz
 
-setTimeout(function(){
-
-    console.log("hello3");
-},1500)
-
-setTimeout(()=>{
-
-    console.log("hello4");
-},2000)
+let total=numbers.reduce((accumulator,element)=>{return accumulator+element});
+console.log(total);
