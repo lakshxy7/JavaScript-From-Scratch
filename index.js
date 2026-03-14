@@ -1,40 +1,35 @@
-// ARROW FUNCTION
-// Arrow functions are a shorter and cleaner way to write
-// function expressions in JavaScript.
-// They are mostly used for small or simple functions.
-// The syntax uses an arrow => instead of the "function" keyword.
+// Objects in JS = A collection of related properties and/or methods
+// can represent real world objects (people,product,places)
+// object =(key:value/function);
 
-// syntax
-// (parameters) => { code }
+//methods  is a function that belongs to an object
 
-const numbers=[1,2,3,4,5]
-// 3. map()
+const person1={
+    firstName:"Spongebob",
+    lastName:"Squarepants",
+    age:30,
+    isEmployed:true,
+    sayHello: ()=>{console.log("say Hello")},
+    eat: ()=>{console.log("im eating")},
 
-// Used to transform each element and return a new array.
+}
 
-let Squares=numbers.map((element)=>{
-
-    return Math.pow(element,2);
-});
-console.log(Squares);
-
-
-let cubes=numbers.map((element)=>{
-
-    return Math.pow(element,3);
-});
-console.log(cubes);
-
-// 4. filter()
-
-// Used to keep elements that match a condition.
-let odds=numbers.filter((element)=>{
-
-    return Math.pow(element,3);
-});
-console.log(cubes);
+const person2={
+    firstName:"Patric",
+    lastName:"Star",
+    age:42,
+    isEmployed:false,
 
 
 
-let total=numbers.reduce((accumulator,element)=>{return accumulator+element});
-console.log(total);
+}
+
+console.log(person1.firstName,person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
+person1.sayHello();
+person1.eat();
+
+console.log(person2.firstName,person2.lastName);
+console.log(person2.age);
+console.log(person2.isEmployed);
